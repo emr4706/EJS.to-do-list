@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+
+   
+    <!-- <% if(kindOfDay === "Saturday" || kindOfDay === "Sunday") { %>
+        <h1 style="color:blueviolet"><%= kindOfDay %> To Do List</h1>  
+    <% } else { %>
+        <h1 style="color:red"><%= kindOfDay %> To Do List</h1>  
+   <% } %> -->
+
+   <h1><%= kindOfDay %></h1>
+
+   <ul>
+       <!-- <li>Buy food</li>
+       <li>kook food</li>
+       <li>eat food</li> -->
+      <% for(var i=0; i<newListItems.length; i++){ %>
+           <li> <%= newListItems[i] %></li>
+      <% } %>
+   </ul>
+
+   <form action="/" method="POST">
+       <input type="text" name="newItem">
+       <button type="submit" name="button">Add</button>
+   </form>
+
+
+
+</body>
+</html>
